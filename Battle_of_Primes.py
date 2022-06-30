@@ -1,19 +1,15 @@
-def prime(n):
-    if n==1:
+def prime(a):
+    c=0
+    for i in range(1,a+1):
+        if a%i==0:
+            c+=1
+    if c==2:
+        return 1
+    else:
         return 0
-    for i in range(2,(n//2)+1):
-        if n%i==0:
-            return 0
-    return n
-x = int(input())
-y = int(input())
-i=1
-c=0
-v = x+y
-while i!=0:
-    n = v+i
-    if prime(n):
-        m=n
+a=int(input())
+b=int(input())
+for i in range(1,1000):
+    if prime(i+a+b)==1:
+        print(i)
         break
-    i += 1
-print(abs((x+y)-m))
