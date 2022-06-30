@@ -1,17 +1,14 @@
-def prime(k):
-    if k==1:
-        return 0
-    for i in range(2,int(k**0.5)+1,1):
-        if k%i==0:
+import math
+def prime(a):
+    c=0
+    for i in range(2,round(math.sqrt(a))+1):
+        if a%i==0:
             return 0
-            break
     return 1
-    
-x =int(input())
-y=int(input())
-c=0
-for i in range(x,y+1):
-    if prime(i):
-        c+=1
-print(c)
-
+a=int(input())
+b=int(input())
+count=0
+for i in range(a,b+1):
+    if prime(i)==1 and i!=1:
+        count+=1
+print(count)
