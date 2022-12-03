@@ -1,6 +1,5 @@
-x = int(input())
-l = set(map(int,input().split()))
-s=0
-for i in l:
-    s+=i
-print(s)
+n=int(input())
+l=list(map(int,input().split()))
+s=set(l)
+a=sum(s)
+print(a)
